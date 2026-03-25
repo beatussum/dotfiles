@@ -1,7 +1,7 @@
 { self, ... }:
 {
   configurations.home = {
-    users.matteo = {
+    users.matteo = { pkgs, ... }: {
       imports = [
         self.homeModules.eza
         self.homeModules.fastfetch
@@ -14,6 +14,10 @@
       xdg.autostart.enable = true;
 
       home = {
+        packages = [
+          pkgs.vlc
+        ];
+
         username = "matteo";
         homeDirectory = "/home/matteo";
         stateVersion = "25.05";
