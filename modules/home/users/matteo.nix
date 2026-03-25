@@ -6,6 +6,7 @@
         self.homeModules.eza
         self.homeModules.fastfetch
         self.homeModules.helix
+        self.homeModules.keepassxc
         self.homeModules.nushell
         self.homeModules.starship
       ];
@@ -13,6 +14,8 @@
       home.username = "matteo";
       home.homeDirectory = "/home/matteo";
       home.stateVersion = "25.05";
+
+      xdg.autostart.enable = true;
     };
   };
 }
