@@ -3,6 +3,7 @@
   configurations.home = {
     users.matteo = {
       imports = [
+        self.homeModules.eza
         self.homeModules.helix
         self.homeModules.nushell
         self.homeModules.starship
