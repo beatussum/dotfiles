@@ -11,6 +11,7 @@
         self.homeModules.starship
 
         # Hyprland
+        self.homeModules.hypridle
         self.homeModules.hyprlock
         self.homeModules.hyprpanel
       ];
