@@ -11,6 +11,7 @@
         self.homeModules.starship
       ];
 
+      services.ssh-agent.enable = true;
       xdg.autostart.enable = true;
 
       home = {
