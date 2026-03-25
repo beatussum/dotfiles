@@ -9,6 +9,9 @@
         self.homeModules.keepassxc
         self.homeModules.nushell
         self.homeModules.starship
+
+        # Hyprland
+        self.homeModules.hyprpanel
       ];
 
       services.ssh-agent.enable = true;
