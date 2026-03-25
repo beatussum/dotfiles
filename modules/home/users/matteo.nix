@@ -10,12 +10,14 @@
         self.homeModules.nushell
         self.homeModules.starship
       ];
-      
-      home.username = "matteo";
-      home.homeDirectory = "/home/matteo";
-      home.stateVersion = "25.05";
 
       xdg.autostart.enable = true;
+
+      home = {
+        username = "matteo";
+        homeDirectory = "/home/matteo";
+        stateVersion = "25.05";
+      };
     };
   };
 }
