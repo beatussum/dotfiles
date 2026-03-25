@@ -4,6 +4,7 @@
     users.matteo = {
       imports = [
         self.homeModules.helix
+        self.homeModules.nushell
         self.homeModules.starship
       ];
       
