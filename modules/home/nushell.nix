@@ -1,5 +1,7 @@
 {
   configurations.home.modules.nushell = { pkgs, ... }: {
+    home.shell.enableNushellIntegration = true;
+
     programs.nushell = {
       enable = true;
 
