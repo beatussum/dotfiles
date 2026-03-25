@@ -4,6 +4,7 @@
     users.matteo = {
       imports = [
         self.homeModules.eza
+        self.homeModules.fastfetch
         self.homeModules.helix
         self.homeModules.nushell
         self.homeModules.starship
