@@ -33,6 +33,7 @@
 
         programs = {
           bat.enable = true;
+          discord.enable = true;
           nix-index.enable = true;
         };
 
