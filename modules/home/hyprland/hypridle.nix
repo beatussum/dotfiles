@@ -1,5 +1,5 @@
 {
-  configurations.home.modules.hypridle =
+  flake.homeModules.hypridle =
     { pkgs, ... }:
     let
       hyprctl = "${pkgs.hyprland}/bin/hyprctl";

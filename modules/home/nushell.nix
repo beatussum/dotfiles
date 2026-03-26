@@ -1,5 +1,5 @@
 {
-  configurations.home.modules.nushell =
+  flake.homeModules.nushell =
     { pkgs, ... }:
     {
       home.shell.enableNushellIntegration = true;

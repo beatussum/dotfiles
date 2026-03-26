@@ -1,5 +1,5 @@
 {
-  configurations.home.modules.keepassxc = {
+  flake.homeModules.keepassxc = {
     programs.keepassxc = {
       autostart = true;
       enable = true;

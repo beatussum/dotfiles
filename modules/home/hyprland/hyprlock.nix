@@ -1,5 +1,5 @@
 {
-  configurations.home.modules.hyprlock =
+  flake.homeModules.hyprlock =
     { pkgs, ... }:
     let
       date = "${pkgs.coreutils}/bin/date";

@@ -18,7 +18,7 @@ in
     { system, ... }:
     {
       treefmt.programs.nixfmt.enable = true;
-      _module.args.pkgs = import nixpkgs { inherit system; };
+      _module.args.pkgs = nixpkgs.legacyPackages."${system}";
     };
 
   systems = [ "x86_64-linux" ];

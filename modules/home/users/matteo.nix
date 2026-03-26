@@ -1,7 +1,8 @@
-{ self, ... }:
+{ self, inputs, ... }:
 {
-  configurations.home = {
-    users.matteo =
+  configurations.home.matteo = {
+    pkgs = inputs.nixpkgs.legacyPackages."x86_64-linux";
+    module =
       { pkgs, ... }:
       {
         imports = [

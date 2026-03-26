@@ -1,5 +1,5 @@
 {
-  configurations.home.modules.hyprpanel = {
+  flake.homeModules.hyprpanel = {
     programs.hyprpanel = {
       enable = true;
 

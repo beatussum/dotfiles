@@ -1,5 +1,5 @@
 {
-  configurations.home.modules.starship = {
+  flake.homeModules.starship = {
     programs.starship = {
       enable = true;
       enableNushellIntegration = true;
