@@ -46,7 +46,7 @@
             comma
             nil
             nitrokey-app2
-            protonvpn-gui
+            proton-vpn
             pynitrokey
             signal-desktop
             vlc
