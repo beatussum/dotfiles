@@ -1,10 +1,13 @@
 { inputs, ... }:
 {
-  flake.homeModules.hyprlock = {
-    imports = [ inputs.catppuccin.homeModules.catppuccin ];
+  flake.homeModules.hyprlock =
+    { pkgs, ... }:
+    {
+      imports = [ inputs.catppuccin.homeModules.catppuccin ];
 
-    stylix.targets.hyprlock.enable = false;
-    catppuccin.hyprlock.enable = true;
-    programs.hyprlock.enable = true;
-  };
+      home.packages = [ pkgs.nerd-fonts.jetbrains-mono ];
+      stylix.targets.hyprlock.enable = false;
+      catppuccin.hyprlock.enable = true;
+      programs.hyprlock.enable = true;
+    };
 }
