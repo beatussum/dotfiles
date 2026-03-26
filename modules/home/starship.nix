@@ -6,14 +6,7 @@
 
       settings = {
         format = ''
-          $cmake\
-          $rust\
-          $package\
-          $cmd_duration\
-          $git_branch\
-          $git_commit\
-          $git_state\
-          $git_metrics
+          $cmake$rust$package$cmd_duration$git_branch$git_commit$git_state$git_metrics
           $username$hostname$localip$sudo$directory$time
           $status$character
         '';
