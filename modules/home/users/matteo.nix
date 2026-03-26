@@ -27,6 +27,7 @@
         ];
 
         services = {
+          protonmail-bridge.enable = true;
           ssh-agent.enable = true;
           swww.enable = true;
         };
@@ -44,6 +45,7 @@
           packages = with pkgs; [
             comma
             nil
+            protonvpn-gui
             signal-desktop
             vlc
           ];
