@@ -4,7 +4,7 @@
       description = "Mattéo Rossillol‑‑Laruelle";
       extraGroups = [ "wheel" ];
       isNormalUser = true;
-      initialPassword = "aa";
+      initialPassword = "password";
       shell = pkgs.bash;
     };
   };
