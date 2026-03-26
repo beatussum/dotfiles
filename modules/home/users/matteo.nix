@@ -4,7 +4,7 @@
     pkgs = inputs.nixpkgs.legacyPackages."x86_64-linux";
 
     module =
-      { pkgs, ... }:
+      { lib, pkgs, ... }:
       {
         imports = [
           self.homeModules.eza
@@ -37,6 +37,7 @@
           nix-index.enable = true;
         };
 
+        nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [ "discord" ];
         xdg.autostart.enable = true;
 
         home = {
