@@ -38,6 +38,7 @@
           bat.enable = true;
           discord.enable = true;
           nix-index.enable = true;
+          nix-your-shell.enable = true;
         };
 
         nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [ "discord" ];
