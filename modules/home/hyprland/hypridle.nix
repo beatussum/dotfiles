@@ -1,11 +1,13 @@
 {
-  configurations.home.modules.hypridle = { pkgs, ... }: let
+  configurations.home.modules.hypridle =
+    { pkgs, ... }:
+    let
       hyprctl = "${pkgs.hyprland}/bin/hyprctl";
       loginctl = "${pkgs.systemd}/bin/loginctl";
       pidof = "${pkgs.procps}/bin/pidof";
       systemctl = "${pkgs.systemd}/bin/systemctl";
     in
-      {
+    {
       services.hypridle = {
         enable = true;
 
@@ -47,5 +49,5 @@
           ];
         };
       };
-  };
+    };
 }

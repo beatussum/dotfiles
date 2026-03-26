@@ -6,10 +6,18 @@
 
       settings = {
         mgr = {
-          ratio = [ 2 5 3 ];
+          ratio = [
+            2
+            5
+            3
+          ];
           sort_by = "natural";
           sort_translit = true;
-          mouse_events = [ "click" "scroll" "drag" ];
+          mouse_events = [
+            "click"
+            "scroll"
+            "drag"
+          ];
         };
       };
     };

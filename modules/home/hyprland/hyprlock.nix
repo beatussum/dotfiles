@@ -1,8 +1,10 @@
 {
-  configurations.home.modules.hyprlock = { pkgs, ... }: let
-    date = "${pkgs.coreutils}/bin/date";
-    tr = "${pkgs.coreutils}/bin/tr";
-  in
+  configurations.home.modules.hyprlock =
+    { pkgs, ... }:
+    let
+      date = "${pkgs.coreutils}/bin/date";
+      tr = "${pkgs.coreutils}/bin/tr";
+    in
     {
       home.packages = [
         pkgs.geist-font

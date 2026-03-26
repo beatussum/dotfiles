@@ -50,15 +50,16 @@
                     content = {
                       type = "btrfs";
 
-                      subvolumes = let
-                        mountOptions = [
-                          "defaults"
-                          "noatime"
-                          "nodev"
-                          "noexec"
-                          "nosuid"
-                        ];
-                      in
+                      subvolumes =
+                        let
+                          mountOptions = [
+                            "defaults"
+                            "noatime"
+                            "nodev"
+                            "noexec"
+                            "nosuid"
+                          ];
+                        in
                         {
                           "@" = {
                             mountpoint = "/";
@@ -68,12 +69,12 @@
                               "noatime"
                             ];
                           };
-                          
+
                           "@home" = {
                             inherit mountOptions;
                             mountpoint = "/home";
                           };
-                          
+
                           "@local" = {
                             inherit mountOptions;
                             mountpoint = "/usr/local";

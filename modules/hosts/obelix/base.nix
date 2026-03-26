@@ -1,4 +1,9 @@
-{ self, inputs, lib, ... }:
+{
+  self,
+  inputs,
+  lib,
+  ...
+}:
 {
   configurations.nixos.obelix = {
     home-manager = {
