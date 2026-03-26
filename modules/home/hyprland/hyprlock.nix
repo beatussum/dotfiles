@@ -1,6 +1,6 @@
 {
   flake.homeModules.hyprlock =
-    { pkgs, ... }:
+    { pkgs, lib, ... }:
     let
       date = "${pkgs.coreutils}/bin/date";
       tr = "${pkgs.coreutils}/bin/tr";
@@ -14,7 +14,7 @@
       programs.hyprlock = {
         enable = true;
 
-        settings = {
+        settings = lib.mkForce {
           background = [
             {
               blur_size = 4;

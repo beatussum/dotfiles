@@ -20,6 +20,10 @@
           self.homeModules.hypridle
           self.homeModules.hyprlock
           self.homeModules.hyprpanel
+
+          # stylix
+          inputs.stylix.homeModules.stylix
+          self.homeModules.stylix
         ];
 
         services = {
