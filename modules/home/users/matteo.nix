@@ -2,12 +2,14 @@
 {
   configurations.home.matteo = {
     pkgs = inputs.nixpkgs.legacyPackages."x86_64-linux";
+
     module =
       { pkgs, ... }:
       {
         imports = [
           self.homeModules.eza
           self.homeModules.fastfetch
+          self.homeModules.fonts
           self.homeModules.helix
           self.homeModules.keepassxc
           self.homeModules.nushell
