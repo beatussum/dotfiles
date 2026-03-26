@@ -10,6 +10,7 @@
     {
       imports = [
         self.nixosModules.base
+        self.nixosModules.htop
         self.nixosModules.l10n
         self.nixosModules.greetd
         self.nixosModules.matteo
