@@ -17,6 +17,7 @@
           self.homeModules.yazi
 
           # Hyprland
+          self.homeModules.hyprcursor
           self.homeModules.hypridle
           self.homeModules.hyprlock
           self.homeModules.hyprpanel
