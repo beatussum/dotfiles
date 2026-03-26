@@ -41,8 +41,9 @@
 
         home = {
           packages = with pkgs; [
-            nil
             comma
+            nil
+            signal-desktop
             vlc
           ];
 
