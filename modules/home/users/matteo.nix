@@ -17,7 +17,11 @@
         self.homeModules.hyprpanel
       ];
 
-      services.ssh-agent.enable = true;
+      services = {
+        ssh-agent.enable = true;
+        swww.enable = true;
+      };
+
       xdg.autostart.enable = true;
 
       home = {
