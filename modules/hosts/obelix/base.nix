@@ -18,8 +18,9 @@
       imports = [
         self.nixosModules.base
         self.nixosModules.l10n
-        self.nixosModules.matteo
+        self.nixosModules.greetd
         self.nixosModules.homeMatteo
+        self.nixosModules.matteo
 
         # disko
         inputs.disko.nixosModules.default
