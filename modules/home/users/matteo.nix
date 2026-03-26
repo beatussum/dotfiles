@@ -27,8 +27,9 @@
         xdg.autostart.enable = true;
 
         home = {
-          packages = [
-            pkgs.vlc
+          packages = with pkgs; [
+            comma
+            vlc
           ];
 
           username = "matteo";
