@@ -45,7 +45,9 @@
           packages = with pkgs; [
             comma
             nil
+            nitrokey-app2
             protonvpn-gui
+            pynitrokey
             signal-desktop
             vlc
           ];

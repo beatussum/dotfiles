@@ -24,6 +24,7 @@
         vulnix
       ];
 
+      hardware.nitrokey.enable = true;
       networking.hostName = "obelix";
       nixpkgs.hostPlatform = lib.mkForce "x86_64-linux";
       system.stateVersion = "25.05";
