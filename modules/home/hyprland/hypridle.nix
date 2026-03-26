@@ -1,11 +1,14 @@
 {
   flake.homeModules.hypridle =
-    { pkgs, ... }:
+    { pkgs, config, ... }:
     let
-      hyprctl = "${pkgs.hyprland}/bin/hyprctl";
       loginctl = "${pkgs.systemd}/bin/loginctl";
-      pidof = "${pkgs.procps}/bin/pidof";
       systemctl = "${pkgs.systemd}/bin/systemctl";
+
+      brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
+      hyprctl = "${config.wayland.windowManager.hyprland.package}/bin/hyprctl";
+      hyprlock = "${pkgs.hyprlock}/bin/hyprlock";
+      pidof = "${pkgs.procps}/bin/pidof";
     in
     {
       services.hypridle = {
@@ -13,7 +16,7 @@
 
         settings = {
           general = {
-            lock_cmd = "${pidof} ${pkgs.hyprlock} || ${pkgs.hyprlock}";
+            lock_cmd = "${pidof} ${hyprlock} || ${hyprlock}";
             before_sleep_cmd = "${loginctl} lock-session";
             after_sleep_cmd = "${hyprctl} dispatch dpms on";
           };
@@ -21,14 +24,14 @@
           listener = [
             {
               timeout = 150;
-              on-timeout = "${pkgs.brightnessctl} -s set 10";
-              on-resume = "${pkgs.brightnessctl} -r";
+              on-timeout = "${brightnessctl} -s set 10";
+              on-resume = "${brightnessctl} -r";
             }
 
             {
               timeout = 150;
-              on-timeout = "${pkgs.brightnessctl} -sd tpacpi::kbd_backlight set 0";
-              on-resume = "${pkgs.brightnessctl} -rd tpacpi::kbd_backlight";
+              on-timeout = "${brightnessctl} -sd tpacpi::kbd_backlight set 0";
+              on-resume = "${brightnessctl} -rd tpacpi::kbd_backlight";
             }
 
             {

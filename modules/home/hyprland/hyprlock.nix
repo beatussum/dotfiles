@@ -2,13 +2,14 @@
   flake.homeModules.hyprlock =
     { pkgs, lib, ... }:
     let
+      curl = "${pkgs.curl}/bin/curl";
       date = "${pkgs.coreutils}/bin/date";
       tr = "${pkgs.coreutils}/bin/tr";
     in
     {
       home.packages = [
         pkgs.geist-font
-        pkgs.jetbrains-mono
+        pkgs.nerd-fonts.jetbrains-mono
       ];
 
       programs.hyprlock = {
@@ -78,7 +79,7 @@
 
             # Degrees
             {
-              text = "cmd[update:18000000] echo \"<b> Ressenti <big>$(${pkgs.curl} -s 'wttr.in?format=%t' | ${tr} -d '+')</big></b>\"";
+              text = "cmd[update:18000000] echo \"<b> Ressenti <big>$(${curl} -s 'wttr.in?format=%t' | ${tr} -d '+')</big></b>\"";
               font_size = 18;
               font_family = "Geist Mono 10";
 
