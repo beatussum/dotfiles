@@ -9,6 +9,7 @@
         self.homeModules.keepassxc
         self.homeModules.nushell
         self.homeModules.starship
+        self.homeModules.yazi
 
         # Hyprland
         self.homeModules.hypridle
