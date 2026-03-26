@@ -14,6 +14,7 @@
           self.homeModules.keepassxc
           self.homeModules.nushell
           self.homeModules.starship
+          self.homeModules.xdg
           self.homeModules.yazi
 
           # Hyprland
@@ -40,7 +41,6 @@
         };
 
         nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [ "discord" ];
-        xdg.autostart.enable = true;
 
         home = {
           packages = with pkgs; [
