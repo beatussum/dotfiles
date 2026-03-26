@@ -31,6 +31,7 @@
           swww.enable = true;
         };
 
+        programs.nix-index.enable = true;
         xdg.autostart.enable = true;
 
         home = {
