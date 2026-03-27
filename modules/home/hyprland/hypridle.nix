@@ -5,7 +5,6 @@
       loginctl = "${pkgs.systemd}/bin/loginctl";
       systemctl = "${pkgs.systemd}/bin/systemctl";
 
-      brightnessctl = "${pkgs.brightnessctl}/bin/brightnessctl";
       hyprctl = "${config.wayland.windowManager.hyprland.package}/bin/hyprctl";
       hyprlock = "${pkgs.hyprlock}/bin/hyprlock";
       pidof = "${pkgs.procps}/bin/pidof";
@@ -22,18 +21,6 @@
           };
 
           listener = [
-            {
-              timeout = 150;
-              on-timeout = "${brightnessctl} -s set 10";
-              on-resume = "${brightnessctl} -r";
-            }
-
-            {
-              timeout = 150;
-              on-timeout = "${brightnessctl} -sd tpacpi::kbd_backlight set 0";
-              on-resume = "${brightnessctl} -rd tpacpi::kbd_backlight";
-            }
-
             {
               timeout = 330;
               on-timeout = "${hyprctl} dispatch dpms off";
