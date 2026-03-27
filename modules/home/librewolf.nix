@@ -29,6 +29,7 @@
               libredirect
               return-youtube-dislikes
               sponsorblock
+              vimium
             ];
           };
 
