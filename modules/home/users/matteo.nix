@@ -7,11 +7,14 @@
       { lib, pkgs, ... }:
       {
         imports = [
+          inputs.nur.modules.homeManager.default
+
           self.homeModules.eza
           self.homeModules.fastfetch
           self.homeModules.fonts
           self.homeModules.helix
           self.homeModules.keepassxc
+          self.homeModules.librewolf
           self.homeModules.nushell
           self.homeModules.starship
           self.homeModules.xdg
