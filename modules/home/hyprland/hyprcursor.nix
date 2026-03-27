@@ -1,10 +1,10 @@
 {
   flake.homeModules.hyprcursor =
-    { pkgs, ... }:
+    { lib, pkgs, ... }:
     {
       home.pointerCursor = {
         enable = true;
-        name = pkgs.rose-pine-hyprcursor.pname;
+        name = lib.getName pkgs.rose-pine-hyprcursor;
         hyprcursor.enable = true;
         package = pkgs.rose-pine-hyprcursor;
       };
