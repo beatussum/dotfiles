@@ -48,6 +48,7 @@
             comma
             nil
             nitrokey-app2
+            nix-search-tv
             proton-vpn
             pynitrokey
             signal-desktop
