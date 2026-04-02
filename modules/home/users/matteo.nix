@@ -24,7 +24,6 @@
 
           # Hyprland
           self.homeModules.hyprcursor
-          self.homeModules.hypridle
 
           # stylix
           inputs.stylix.homeModules.stylix
