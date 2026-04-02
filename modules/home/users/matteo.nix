@@ -48,6 +48,7 @@
 
         home = {
           packages = with pkgs; [
+            cgdb
             comma
             nil
             nitrokey-app2
