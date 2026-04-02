@@ -7,8 +7,10 @@
       { lib, pkgs, ... }:
       {
         imports = [
+          inputs.caelestia-shell.homeManagerModules.default
           inputs.nur.modules.homeManager.default
 
+          self.homeModules.caelestia
           self.homeModules.eza
           self.homeModules.fastfetch
           self.homeModules.fonts
@@ -23,8 +25,6 @@
           # Hyprland
           self.homeModules.hyprcursor
           self.homeModules.hypridle
-          self.homeModules.hyprlock
-          self.homeModules.hyprpanel
 
           # stylix
           inputs.stylix.homeModules.stylix
