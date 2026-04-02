@@ -13,6 +13,7 @@
           enable = true;
           createDirectories = true;
 
+          desktop = "${home}/Bureau";
           documents = "${home}/Documents";
           download = "${home}/Telechargements";
           music = "${home}/Musiques";
