@@ -1,9 +1,14 @@
 {
   flake.homeModules.nushell =
-    { config, pkgs, ... }:
+    {
+      lib,
+      config,
+      pkgs,
+      ...
+    }:
     let
-      eza = "${config.programs.eza.package}/bin/eza";
-      nushell = "${config.programs.nushell.package}/bin/nu";
+      eza = lib.getExe config.programs.eza.package;
+      nushell = lib.getExe config.programs.nushell.package;
     in
     {
       home.shell.enableNushellIntegration = true;
@@ -27,7 +32,7 @@
             alias ll = l --binary --long --header
             alias la = ll --all
 
-            ${pkgs.fastfetch}/bin/fastfetch
+            ${lib.getExe pkgs.fastfetch}
           '';
 
           settings = {

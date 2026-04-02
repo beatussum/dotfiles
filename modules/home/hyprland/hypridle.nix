@@ -1,13 +1,18 @@
 {
   flake.homeModules.hypridle =
-    { pkgs, config, ... }:
+    {
+      lib,
+      config,
+      pkgs,
+      ...
+    }:
     let
-      loginctl = "${pkgs.systemd}/bin/loginctl";
-      systemctl = "${pkgs.systemd}/bin/systemctl";
+      loginctl = lib.getExe' pkgs.systemd "loginctl";
+      systemctl = lib.getExe' pkgs.systemd "systemctl";
 
-      hyprctl = "${config.wayland.windowManager.hyprland.package}/bin/hyprctl";
-      hyprlock = "${pkgs.hyprlock}/bin/hyprlock";
-      pidof = "${pkgs.procps}/bin/pidof";
+      hyprctl = lib.getExe' config.wayland.windowManager.hyprland.package "hyprctl";
+      hyprlock = lib.getExe pkgs.hyprlock;
+      pidof = lib.getExe' pkgs.procps "pidof";
     in
     {
       services.hypridle = {
